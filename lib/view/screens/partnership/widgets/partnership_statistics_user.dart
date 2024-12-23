@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:currency_trading/shared/custom_textfield.dart';
 import 'package:currency_trading/shared/custom_vertical_sizedox.dart';
 import 'package:currency_trading/utils/icons.dart';
+import 'package:svg_flutter/svg.dart';
 
 class PartnershipStatisticsUser extends StatelessWidget {
   const PartnershipStatisticsUser({
@@ -114,7 +115,7 @@ class PartnershipStatisticsUser extends StatelessWidget {
                                       horizontal: 33, vertical: 10),
                                   child: InkWell(
                                       onTap: onEyeClick,
-                                      child: Image.asset(
+                                      child: SvgPicture.asset(
                                           IconsAssets.eyeUserIcon,
                                           width: 12,
                                           height: 20))))

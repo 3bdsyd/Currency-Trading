@@ -71,7 +71,7 @@ class AccessBoyScreenShotBoxWidget extends StatelessWidget {
                         borderSide: BorderSide.none),
                     filled: true,
                     fillColor:isBasic? const Color(0xff282828).withOpacity(.4): Colors.white.withOpacity(.3),
-                    prefixIcon: Image.asset(
+                    prefixIcon: SvgPicture.asset(
                       IconsAssets.vectorIcon,
                       color: isBasic ? Colors.white : const Color(0xff383F76),
                     ),
@@ -115,7 +115,7 @@ class AccessBoyScreenShotBoxWidget extends StatelessWidget {
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(IconsAssets.sendIcon),
+                          SvgPicture.asset(IconsAssets.sendIcon),
                           const SizedBox(width: 8),
                           const Text('Send',
                               style:

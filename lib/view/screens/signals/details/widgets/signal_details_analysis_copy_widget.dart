@@ -2,6 +2,7 @@ import 'package:currency_trading/logic/controllers/signal_details_controller.dar
 import 'package:currency_trading/view/screens/signals/details/widgets/signal_details_totallist_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:svg_flutter/svg.dart';
 
 class SignalDetailsAnalysisCopyWidget extends GetView<SignalDetailsControllerImpl> {
   const SignalDetailsAnalysisCopyWidget({
@@ -25,7 +26,7 @@ class SignalDetailsAnalysisCopyWidget extends GetView<SignalDetailsControllerImp
             decoration: BoxDecoration(
                 color: color, borderRadius: BorderRadius.circular(8)),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Image.asset(icon),
+              SvgPicture.asset(icon),
               const SizedBox(width: 10),
               Text(text,
                   style: const TextStyle(color: Colors.white, fontSize: 20))

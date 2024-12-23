@@ -1,5 +1,6 @@
 import 'package:currency_trading/shared/custom_vertical_sizedox.dart';
 import 'package:flutter/material.dart';
+import 'package:svg_flutter/svg.dart';
 
 class ResultsCardWidget extends StatelessWidget {
   const ResultsCardWidget(
@@ -26,7 +27,7 @@ class ResultsCardWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const CustomVerticalSizedox(height: 8),
-                    Image.asset(icon, width: 32, height: 32),
+                    SvgPicture.asset(icon, width: 32, height: 32),
                     const SizedBox(height: 8),
                     Text('$title\n$value',
                         style: const TextStyle(

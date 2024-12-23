@@ -3,6 +3,7 @@ import 'package:currency_trading/utils/icons.dart';
 import 'package:currency_trading/view/widgets/title_text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg.dart';
 
 class PartnershipStatisticsTransactions extends StatelessWidget {
   const PartnershipStatisticsTransactions({
@@ -125,7 +126,7 @@ class PartnershipStatisticsTransactions extends StatelessWidget {
                                                   fillColor:
                                                       const Color(0xff282828)
                                                           .withOpacity(.4),
-                                                  prefixIcon: Image.asset(
+                                                  prefixIcon: SvgPicture.asset(
                                                       IconsAssets.amountIcon),
                                                   labelStyle: const TextStyle(
                                                       color: Colors.white)),
@@ -154,10 +155,10 @@ class PartnershipStatisticsTransactions extends StatelessWidget {
                                                             fontSize: 20))))
                                           ])),
                                 )),
-                            child: Image.asset(IconsAssets.withdrawalIcon,
+                            child: SvgPicture.asset(IconsAssets.withdrawalIcon,
                                 width: 30, height: 30),
                           )
-                        : Image.asset(IconsAssets.depositIcon,
+                        : SvgPicture.asset(IconsAssets.depositIcon,
                             width: 30, height: 30))),
             title: index == 0
                 ? Row(

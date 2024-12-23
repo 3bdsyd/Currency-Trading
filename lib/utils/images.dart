@@ -1,5 +1,5 @@
 class ImagesAssets {
-  static const String logoImage = 'assets/images/Logo.png';
+  // static const String logoImage = 'assets/images/Logo.png';
   static const String sliderImage = 'assets/images/Rectangle Copy 4.png';
   static const String pathImage = 'assets/images/Path.png';
   // static const String pathRedImage = 'assets/images/Vector 19.png';

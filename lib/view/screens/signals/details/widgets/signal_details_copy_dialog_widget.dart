@@ -3,6 +3,7 @@ import 'package:currency_trading/utils/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg_flutter.dart';
 
 class SignalDetailsCopyDialogWidget extends StatelessWidget {
   const SignalDetailsCopyDialogWidget({
@@ -52,7 +53,7 @@ class SignalDetailsCopyDialogWidget extends StatelessWidget {
                         backgroundColor: const Color(0xffF2B80C),
                         colorText: Colors.black, snackPosition: SnackPosition.BOTTOM);
                   },
-                child: Image.asset(IconsAssets.copyDialogIcon))
+                child: SvgPicture.asset(IconsAssets.copyDialogIcon))
             ]));
   }
 }

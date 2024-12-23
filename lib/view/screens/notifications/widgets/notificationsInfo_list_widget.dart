@@ -4,6 +4,7 @@ import 'package:currency_trading/utils/icons.dart';
 import 'package:currency_trading/view/widgets/main_circular_progress_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg.dart';
 
 class NotificationsInfoListWidget extends StatelessWidget {
   const NotificationsInfoListWidget({super.key});
@@ -59,7 +60,7 @@ class NotificationsInfoListWidget extends StatelessWidget {
                                   fontWeight: FontWeight.w300,
                                   fontSize: 11,
                                   color: Color(0xffF7F7F7))),
-                          leading: Image.asset(IconsAssets.notificationIcon,
+                          leading: SvgPicture.asset(IconsAssets.notificationIcon,
                               width: 30)));
                 },
                 separatorBuilder: (context, index) =>

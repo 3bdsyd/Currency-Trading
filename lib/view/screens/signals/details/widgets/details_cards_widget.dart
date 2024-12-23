@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:currency_trading/logic/controllers/signals_controller.dart';
 import 'package:currency_trading/shared/custom_vertical_sizedox.dart';
 import 'package:currency_trading/utils/icons.dart';
+import 'package:svg_flutter/svg.dart';
 
 class DetailsCardsWidget extends StatelessWidget {
   const DetailsCardsWidget({
@@ -64,7 +65,7 @@ class DetailsCardsWidget extends StatelessWidget {
                       InkWell(
                           // onTap: () =>
                           // Get.to(() => const SignalDetailsScreen()),
-                          child: Image.asset(IconsAssets.detailsArrowIcon))
+                          child: SvgPicture.asset(IconsAssets.detailsArrowIcon))
                     ]),
                   ),
               itemCount: 2)),

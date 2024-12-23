@@ -1,5 +1,6 @@
 import 'package:currency_trading/shared/custom_vertical_sizedox.dart';
 import 'package:flutter/material.dart';
+import 'package:svg_flutter/svg.dart';
 
 class HistoryInfoCardsWidget extends StatelessWidget {
   const HistoryInfoCardsWidget({
@@ -19,7 +20,7 @@ class HistoryInfoCardsWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const CustomVerticalSizedox(height: 10),
-          Image.asset(icon),
+          SvgPicture.asset(icon),
           const CustomVerticalSizedox(height: 10),
           Text('$label\n\n $number',
               style: const TextStyle(fontSize: 12, color: Colors.white),

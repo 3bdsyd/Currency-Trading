@@ -35,7 +35,7 @@ class SignUpScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const SizedBox(height: 40),
-                              Image.asset(ImagesAssets.logoImage, width: 150),
+                            SvgPicture.asset(IconsAssets.logoIcon, width: 150),
                               const CustomVerticalSizedox(height: 20),
                               const TitleTextFieldWidget(title: 'Name '),
                               const CustomVerticalSizedox(height: 10),

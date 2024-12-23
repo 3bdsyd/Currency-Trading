@@ -2,13 +2,13 @@ import 'package:currency_trading/core/services/app_services.dart';
 import 'package:currency_trading/shared/custom_vertical_sizedox.dart';
 import 'package:currency_trading/utils/constants/app_key.dart';
 import 'package:currency_trading/utils/icons.dart';
-import 'package:currency_trading/utils/images.dart';
 import 'package:currency_trading/view/screens/auth/login/login_screen.dart';
 import 'package:currency_trading/view/screens/notifications/notifications_screen.dart';
 import 'package:currency_trading/view/widgets/drawer/drawer_login_widget.dart';
 import 'package:currency_trading/view/widgets/drawer/model/drawer_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg.dart';
 
 
 class DrawerWidget extends StatelessWidget {
@@ -27,14 +27,14 @@ class DrawerWidget extends StatelessWidget {
             child: SingleChildScrollView(
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
               const CustomVerticalSizedox(height: 60),
-              Image.asset(ImagesAssets.logoImage, width: 60),
+             SvgPicture.asset(IconsAssets.logoIcon,width: 60),
               Align(
                   alignment: Alignment.centerLeft,
                   child: InkWell(
                       onTap: () {
                         Get.back();
                       },
-                      child: Image.asset(IconsAssets.drawerbackIcon))),
+                      child: SvgPicture.asset(IconsAssets.drawerbackIcon))),
               const CustomVerticalSizedox(height: 10),
               token != null
                   ? const DrawerLoginWidget()
@@ -53,7 +53,7 @@ class DrawerWidget extends StatelessWidget {
                                         transition: Transition.leftToRight)
                                     : () {};
                           },
-                          leading: Image.asset(signalsDrawerModel[index].icon,
+                          leading: SvgPicture.asset(signalsDrawerModel[index].icon,
                               width: 22),
                           title: Text(signalsDrawerModel[index].text,
                               style: const TextStyle(
@@ -61,13 +61,13 @@ class DrawerWidget extends StatelessWidget {
                       itemCount: signalsDrawerModel.length),
               CustomVerticalSizedox(height: token != null ? Get.height/10 : Get.height/2.5),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Image.asset(IconsAssets.telegramIcon, width: 50),
-                Image.asset(IconsAssets.whatsappIcon, width: 50),
-                Image.asset(IconsAssets.youtubeIcon, width: 50),
+                SvgPicture.asset(IconsAssets.telegramIcon, width: 50),
+                SvgPicture.asset(IconsAssets.whatsappIcon, width: 50),
+                SvgPicture.asset(IconsAssets.youtubeIcon, width: 50),
               ]),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Image.asset(IconsAssets.twitterIcon, width: 50),
-                Image.asset(IconsAssets.discordIcon, width: 50),
+                SvgPicture.asset(IconsAssets.twitterIcon, width: 50),
+                SvgPicture.asset(IconsAssets.discordIcon, width: 50),
               ]),
               const CustomVerticalSizedox(height: 10)
             ]))));

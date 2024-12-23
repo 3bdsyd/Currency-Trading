@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:svg_flutter/svg.dart';
 
 class PartnershipStatisticsTabWithIcon extends StatelessWidget {
   final String icon;
@@ -21,7 +22,7 @@ class PartnershipStatisticsTabWithIcon extends StatelessWidget {
         final isSelected = controller.index == index;
         return Tab(
             icon: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset(
+          SvgPicture.asset(
             icon,
             color:
                 isSelected ? const Color(0xffF2B80C) : const Color(0xffF7F7F7),

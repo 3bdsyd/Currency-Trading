@@ -8,6 +8,7 @@ import 'package:currency_trading/view/screens/notifications/notifications_screen
 import 'package:currency_trading/view/widgets/drawer/model/drawer_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg_flutter.dart';
 
 final name = Get.find<MyServices>().getBox.read(AppKey.name);
 final wallet = Get.find<MyServices>().getBox.read(AppKey.wallet);
@@ -82,7 +83,7 @@ class DrawerLoginWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: const Color(0xffF2B80C), width: 2)),
           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Image.asset(IconsAssets.copyIcon, width: 12, height: 14),
+            SvgPicture.asset(IconsAssets.copyIcon, width: 12, height: 14),
             const SizedBox(width: 5),
           
              Text('Invitation Code: $code',

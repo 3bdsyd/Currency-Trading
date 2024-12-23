@@ -1,8 +1,8 @@
-import 'package:currency_trading/utils/images.dart';
-import 'package:currency_trading/view/screens/auth/login/login_screen.dart';
+import 'package:currency_trading/utils/icons.dart';
 import 'package:currency_trading/view/screens/root/root_screen.dart';
 import 'package:currency_trading/view/widgets/mainLinear_gradient_function.dart';
 import 'package:flutter/material.dart';
+import 'package:svg_flutter/svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
         height: double.infinity,
         width: double.infinity,
         decoration: mainLinearGradient(),
-        child: Image.asset(ImagesAssets.logoImage),
+        child:SvgPicture.asset(IconsAssets.logoIcon),
       ),
     );
   }

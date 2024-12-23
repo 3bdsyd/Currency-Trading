@@ -116,7 +116,7 @@ class AccessBoyScreen extends GetView<GeneralControllerImpl> {
                                                                     .only(
                                                                     right:
                                                                         18.0),
-                                                            child: Image.asset(
+                                                            child: SvgPicture.asset(
                                                                 IconsAssets
                                                                     .rightIcon,
                                                                 color: const Color(
@@ -145,7 +145,7 @@ class AccessBoyScreen extends GetView<GeneralControllerImpl> {
                                                 fillColor:
                                                     const Color(0xff282828)
                                                         .withOpacity(.4),
-                                                prefixIcon: Image.asset(
+                                                prefixIcon: SvgPicture.asset(
                                                     IconsAssets.couponIcon),
                                                 labelStyle: const TextStyle(
                                                     color: Colors.white)),

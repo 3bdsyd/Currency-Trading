@@ -13,6 +13,7 @@ import 'package:currency_trading/view/widgets/main_circular_progress_widget.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:svg_flutter/svg.dart';
 
 class SignalDetailsScreen extends GetView<SignalDetailsControllerImpl> {
   const SignalDetailsScreen({
@@ -182,7 +183,7 @@ class SignalDetailsScreen extends GetView<SignalDetailsControllerImpl> {
                                               hintStyle: const TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.w400),
-                                              suffixIcon: Image.asset(
+                                              suffixIcon: SvgPicture.asset(
                                                   IconsAssets.editIcon),
                                               contentPadding:
                                                   const EdgeInsets.symmetric(

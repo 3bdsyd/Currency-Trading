@@ -2,6 +2,7 @@ import 'package:currency_trading/logic/controllers/root_controller.dart';
 import 'package:currency_trading/utils/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg.dart';
 
 class RootScreen extends GetView<RootController> {
   const RootScreen({super.key});
@@ -28,7 +29,7 @@ class RootScreen extends GetView<RootController> {
                   items: [
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
-                        icon: Image.asset(IconsAssets.partnershipIcon,
+                        icon: SvgPicture.asset(IconsAssets.partnershipIcon,
                             width: 30,
                             color: controller.currentIndex == 0
                                 ? const Color(0xffF2B80C)
@@ -36,7 +37,7 @@ class RootScreen extends GetView<RootController> {
                         label: 'Partnership'),
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
-                        icon: Image.asset(IconsAssets.supportIcon,
+                        icon: SvgPicture.asset(IconsAssets.supportIcon,
                             width: 30,
                             color: controller.currentIndex == 1
                                 ? const Color(0xffF2B80C)
@@ -44,7 +45,7 @@ class RootScreen extends GetView<RootController> {
                         label: 'Support'),
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
-                        icon: Image.asset(IconsAssets.historyIcon,
+                        icon: SvgPicture.asset(IconsAssets.historyIcon,
                             width: 30,
                             color: controller.currentIndex == 2
                                 ? const Color(0xffF2B80C)
@@ -52,7 +53,7 @@ class RootScreen extends GetView<RootController> {
                         label: 'History'),
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
-                        icon: Image.asset(IconsAssets.signalsIcon,
+                        icon: SvgPicture.asset(IconsAssets.signalsIcon,
                             width: 30,
                             color: controller.currentIndex == 3
                                 ? const Color(0xffF2B80C)
@@ -60,7 +61,7 @@ class RootScreen extends GetView<RootController> {
                         label: 'Signals'),
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
-                        icon: Image.asset(IconsAssets.resultsIcon,
+                        icon: SvgPicture.asset(IconsAssets.resultsIcon,
                             width: 30,
                             color: controller.currentIndex == 4
                                 ? const Color(0xffF2B80C)
@@ -68,7 +69,7 @@ class RootScreen extends GetView<RootController> {
                         label: 'Results'),
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
-                        icon: Image.asset(IconsAssets.accessIcon,
+                        icon: SvgPicture.asset(IconsAssets.accessIcon,
                             width: 30,
                             color: controller.currentIndex == 5
                                 ? const Color(0xffF2B80C)

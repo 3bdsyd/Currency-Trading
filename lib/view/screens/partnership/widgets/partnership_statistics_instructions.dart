@@ -1,6 +1,7 @@
 import 'package:currency_trading/shared/custom_vertical_sizedox.dart';
 import 'package:currency_trading/utils/icons.dart';
 import 'package:flutter/material.dart';
+import 'package:svg_flutter/svg.dart';
 
 int? selected;
 
@@ -57,7 +58,7 @@ class _PartnershipStatisticsInstructionsState
                                             color: Color(0xffB7B7B7)))),
                                 Padding(
                                     padding: const EdgeInsets.only(left: 18.0),
-                                    child: Image.asset(IconsAssets.shapeIcon))
+                                    child: SvgPicture.asset(IconsAssets.shapeIcon))
                               ])),
                           iconColor: Colors.white,
                           children: <Widget>[

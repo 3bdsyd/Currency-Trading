@@ -10,6 +10,7 @@ import 'package:currency_trading/view/widgets/main_name_container_widget.dart';
 import 'package:currency_trading/view/widgets/title_text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg.dart';
 
 class BecomePartnerScreen extends StatelessWidget {
   const BecomePartnerScreen({super.key});
@@ -48,20 +49,20 @@ class BecomePartnerScreen extends StatelessWidget {
                           const TitleTextFieldWidget(title: 'Country '),
                           const CustomVerticalSizedox(height: 10),
                           CustomTextField(
-                            prefixIcon: Image.asset(IconsAssets.countryIcon),
+                            prefixIcon: SvgPicture.asset(IconsAssets.countryIcon),
                           ),
                           const CustomVerticalSizedox(height: 16),
                           const TitleTextFieldWidget(title: 'Birthday '),
                           const CustomVerticalSizedox(height: 10),
                           CustomTextField(
-                            prefixIcon: Image.asset(IconsAssets.birthdayIcon),
+                            prefixIcon: SvgPicture.asset(IconsAssets.birthdayIcon),
                           ),
                           const CustomVerticalSizedox(height: 16),
                           const TitleTextFieldWidget(
                               title: 'Your Wallet Address '),
                           const CustomVerticalSizedox(height: 10),
                           CustomTextField(
-                              prefixIcon: Image.asset(IconsAssets.walletIcon),
+                              prefixIcon: SvgPicture.asset(IconsAssets.walletIcon),
                               suffixIcon: Tooltip(
                                   enableTapToDismiss: true,
                                   textAlign: TextAlign.left,
@@ -82,12 +83,12 @@ class BecomePartnerScreen extends StatelessWidget {
                           // CustomTextField(
                           //     hintText: 'Password',
                           //     prefixIcon: IconsAssets.passwordIcon,
-                          //     suffixIcon: Image.asset(IconsAssets.eyeIcon,
+                          //     suffixIcon: SvgPicture.asset(IconsAssets.eyeIcon,
                           //         width: 7, height: 7)),
                           // CustomTextField(
                           //     hintText: 'Confirm Password',
                           //     prefixIcon: IconsAssets.passwordIcon,
-                          //     suffixIcon: Image.asset(IconsAssets.eyeIcon,
+                          //     suffixIcon: SvgPicture.asset(IconsAssets.eyeIcon,
                           //         width: 7, height: 7)),
                           // const CustomTextField(
                           //     hintText: 'Invitation Code',
