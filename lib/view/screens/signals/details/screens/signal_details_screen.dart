@@ -184,7 +184,7 @@ class SignalDetailsScreen extends GetView<SignalDetailsControllerImpl> {
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.w400),
                                               suffixIcon: SvgPicture.asset(
-                                                  IconsAssets.editIcon),
+                                                  IconsAssets.editIcon, fit: BoxFit.scaleDown,),
                                               contentPadding:
                                                   const EdgeInsets.symmetric(
                                                       horizontal: 18),
@@ -200,7 +200,7 @@ class SignalDetailsScreen extends GetView<SignalDetailsControllerImpl> {
                                               fontWeight: FontWeight.w700,
                                               color: Color(0xffF2B80C),
                                               fontSize: 17)),
-                                              Obx(()=>    SignalDetailsTotalListWidget(
+                                              Obx(()=> SignalDetailsTotalListWidget(
                                           title:
                                               'Our recommendation is to invest in this trade',
                                           total: '\$ ${controller.amount.toStringAsFixed(2)}')),

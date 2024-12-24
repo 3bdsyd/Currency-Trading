@@ -5,6 +5,7 @@ import 'package:currency_trading/view/screens/auth/forgot_password/forgot_passwo
 import 'package:currency_trading/view/widgets/mainLinear_gradient_function.dart';
 import 'package:currency_trading/view/widgets/title_text_field_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -35,7 +36,8 @@ class LoginScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const CustomVerticalSizedox(height: 60),
-                              SvgPicture.asset(IconsAssets.logoIcon),
+                              Image.asset(IconsAssets.logoIcon),
+                              const CustomVerticalSizedox(height: 10),
                               const Text('Welcome back!',
                                   style: TextStyle(
                                       fontSize: 35,
@@ -90,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                                     child: const Text('Forgot Password',
                                         style: TextStyle(
                                             color: Color(0xffB7B7B7),
-                                            fontSize: 13,
+                                            fontSize: 14,
                                             decoration:
                                                 TextDecoration.underline,
                                             decorationColor:

@@ -10,7 +10,7 @@ class CustomButtonWidget extends StatelessWidget {
   final Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
         onTap: onTap,
         child: Container(
             alignment: Alignment.center,
@@ -22,7 +22,8 @@ class CustomButtonWidget extends StatelessWidget {
             child: Text(text,
                 style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w500))));
+                    letterSpacing: 1.2,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800))));
   }
 }

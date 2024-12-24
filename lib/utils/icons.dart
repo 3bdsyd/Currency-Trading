@@ -1,5 +1,5 @@
 class IconsAssets {
-  static const String logoIcon = 'assets/icons/Logo.svg';
+  static const String logoIcon = 'assets/images/Logo.png';
   static const String nameIcon = 'assets/icons/7124034_user_icon 1.svg';
   static const String emailIcon = 'assets/icons/8-Email.svg';
   static const String passwordIcon = 'assets/icons/Design Convert.svg';
@@ -21,11 +21,11 @@ class IconsAssets {
   static const String signalsIcon = 'assets/icons/Signals.svg';
   static const String targetIcon = 'assets/icons/Target 8.svg';
 
-  static const String whatsappIcon = 'assets/icons/whatsapp.svg';
-  static const String telegramIcon = 'assets/icons/telegram.svg';
-  static const String youtubeIcon = 'assets/icons/youtube.svg';
-  static const String twitterIcon = 'assets/icons/twitter.svg';
-  static const String discordIcon = 'assets/icons/Discord.svg';
+  static const String whatsappIcon = 'assets/icons/whatsapp.png';
+  static const String telegramIcon = 'assets/icons/telegram.png';
+  static const String youtubeIcon = 'assets/icons/youtube.png';
+  static const String twitterIcon = 'assets/icons/twitter.png';
+  static const String discordIcon = 'assets/icons/Discord.png';
 
   static const String loginIcon = 'assets/icons/Login 1.svg';
   static const String drawerbackIcon = 'assets/icons/Group 37271.svg';
@@ -40,7 +40,7 @@ class IconsAssets {
   static const String analysiIcon = 'assets/icons/Analysi.svg';
   static const String editIcon = 'assets/icons/Group 37239.svg';
   static const String entryIcon = 'assets/icons/ENTRY 1.svg';
-  static const String stopiIcon = 'assets/icons/STOP 1.svg';
+  static const String stopiIcon = 'assets/icons/STOP 1.png';
   static const String copyDialogIcon = 'assets/icons/Group 37244.svg';
 
   static const String rightIcon = 'assets/icons/right 1.svg';

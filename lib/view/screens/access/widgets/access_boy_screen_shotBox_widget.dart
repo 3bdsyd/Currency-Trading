@@ -18,7 +18,7 @@ class AccessBoyScreenShotBoxWidget extends StatelessWidget {
     return GetBuilder<GeneralControllerImpl>(
       builder: (controller) => Stack(children: [
         Container(
-            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 60),
+            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
             width: double.infinity,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
@@ -72,7 +72,7 @@ class AccessBoyScreenShotBoxWidget extends StatelessWidget {
                     filled: true,
                     fillColor:isBasic? const Color(0xff282828).withOpacity(.4): Colors.white.withOpacity(.3),
                     prefixIcon: SvgPicture.asset(
-                      IconsAssets.vectorIcon,
+                      IconsAssets.vectorIcon, fit: BoxFit.scaleDown,
                       color: isBasic ? Colors.white : const Color(0xff383F76),
                     ),
                     labelStyle: const TextStyle(color: Colors.white)),

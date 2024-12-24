@@ -27,7 +27,7 @@ class DrawerWidget extends StatelessWidget {
             child: SingleChildScrollView(
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
               const CustomVerticalSizedox(height: 60),
-             SvgPicture.asset(IconsAssets.logoIcon,width: 60),
+             Image.asset(IconsAssets.logoIcon,width: 60),
               Align(
                   alignment: Alignment.centerLeft,
                   child: InkWell(
@@ -59,15 +59,15 @@ class DrawerWidget extends StatelessWidget {
                               style: const TextStyle(
                                   color: Colors.white, fontSize: 14))),
                       itemCount: signalsDrawerModel.length),
-              CustomVerticalSizedox(height: token != null ? Get.height/10 : Get.height/2.5),
+              CustomVerticalSizedox(height: token != null ? Get.height/15 : Get.height/2.8),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                SvgPicture.asset(IconsAssets.telegramIcon, width: 50),
-                SvgPicture.asset(IconsAssets.whatsappIcon, width: 50),
-                SvgPicture.asset(IconsAssets.youtubeIcon, width: 50),
+                Image.asset(IconsAssets.telegramIcon, width: 50),
+                Image.asset(IconsAssets.whatsappIcon, width: 50),
+                Image.asset(IconsAssets.youtubeIcon, width: 50),
               ]),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                SvgPicture.asset(IconsAssets.twitterIcon, width: 50),
-                SvgPicture.asset(IconsAssets.discordIcon, width: 50),
+                Image.asset(IconsAssets.twitterIcon, width: 50),
+                Image.asset(IconsAssets.discordIcon, width: 50),
               ]),
               const CustomVerticalSizedox(height: 10)
             ]))));

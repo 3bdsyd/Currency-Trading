@@ -119,6 +119,7 @@ class AccessBoyScreen extends GetView<GeneralControllerImpl> {
                                                             child: SvgPicture.asset(
                                                                 IconsAssets
                                                                     .rightIcon,
+                                                                    fit: BoxFit.scaleDown,
                                                                 color: const Color(
                                                                     0xff13AB25)),
                                                           )
@@ -130,7 +131,7 @@ class AccessBoyScreen extends GetView<GeneralControllerImpl> {
                                                                         18.0),
                                                             child: SvgPicture
                                                                 .asset(IconsAssets
-                                                                    .cancleIcon),
+                                                                    .cancleIcon, fit: BoxFit.scaleDown,),
                                                           ),
                                                 contentPadding:
                                                     const EdgeInsets.symmetric(
@@ -146,7 +147,7 @@ class AccessBoyScreen extends GetView<GeneralControllerImpl> {
                                                     const Color(0xff282828)
                                                         .withOpacity(.4),
                                                 prefixIcon: SvgPicture.asset(
-                                                    IconsAssets.couponIcon),
+                                                    IconsAssets.couponIcon, fit: BoxFit.scaleDown,),
                                                 labelStyle: const TextStyle(
                                                     color: Colors.white)),
                                             style: const TextStyle(

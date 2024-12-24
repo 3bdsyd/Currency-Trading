@@ -3,6 +3,7 @@ import 'package:currency_trading/utils/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 
 class SignalDetailsCopyDialogWidget extends StatelessWidget {
@@ -27,7 +28,7 @@ class SignalDetailsCopyDialogWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(icon),
+             title == 'STOP' ? Image.asset(icon) : SvgPicture.asset(icon),
               const CustomVerticalSizedox(height: 6),
               Text(
                 title,
@@ -50,10 +51,10 @@ class SignalDetailsCopyDialogWidget extends StatelessWidget {
                  onTap: () {
                     Clipboard.setData(ClipboardData(text: number));
                     Get.snackbar('Copied!', number,
-                        backgroundColor: const Color(0xffF2B80C),
+                        backgroundColor: Color.fromARGB(255, 136, 179, 211),
                         colorText: Colors.black, snackPosition: SnackPosition.BOTTOM);
                   },
-                child: SvgPicture.asset(IconsAssets.copyDialogIcon))
+                child: Container(height: 30, width: 50, decoration: BoxDecoration(color: Color(0xff34A9FF), borderRadius: BorderRadius.circular(50)), child: SvgPicture.asset(IconsAssets.copyIcon, fit: BoxFit.scaleDown,)))
             ]));
   }
 }

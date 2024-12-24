@@ -3,13 +3,13 @@ import 'package:currency_trading/shared/custom_button_widget.dart';
 import 'package:currency_trading/shared/custom_textfield.dart';
 import 'package:currency_trading/shared/custom_vertical_sizedox.dart';
 import 'package:currency_trading/utils/icons.dart';
-import 'package:currency_trading/utils/images.dart';
 import 'package:currency_trading/utils/validators/forms_validators.dart';
 import 'package:currency_trading/view/screens/auth/login/login_screen.dart';
 import 'package:currency_trading/view/widgets/auth_appbar_function.dart';
 import 'package:currency_trading/view/widgets/mainLinear_gradient_function.dart';
 import 'package:currency_trading/view/widgets/title_text_field_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -34,8 +34,7 @@ class SignUpScreen extends StatelessWidget {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              const SizedBox(height: 40),
-                            SvgPicture.asset(IconsAssets.logoIcon, width: 150),
+                              Image.asset(IconsAssets.logoIcon, width: 150),
                               const CustomVerticalSizedox(height: 20),
                               const TitleTextFieldWidget(title: 'Name '),
                               const CustomVerticalSizedox(height: 10),
@@ -87,7 +86,6 @@ class SignUpScreen extends StatelessWidget {
                               const CustomVerticalSizedox(height: 10),
                               CustomTextField(
                                   obscureText:
-                                      
                                       !controller.isPasswordConfirmationVisible,
                                   validator: (confirmPassword) =>
                                       FormsValidate.getConfPasswordValidate(

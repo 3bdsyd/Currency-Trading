@@ -21,7 +21,7 @@ class AccessCardWidget extends StatelessWidget {
             fontWeight: FontWeight.w700, color: Color(0xffF7F7F7)),
       ),
       const CustomVerticalSizedox(height: 10),
-     text=='Signals/Daily'?Text(color==const Color(0xff00A7FF)? '1': '+3', style: TextStyle(color: color),): color==const Color(0xff00A7FF) && text == 'Auto Trade'? SvgPicture.asset(IconsAssets.cancleIcon):Image.asset(IconsAssets.rightIcon, color: color)
+     text=='Signals/Daily'?Text(color==const Color(0xff00A7FF)? '1': '+3', style: TextStyle(color: color),): color==const Color(0xff00A7FF) && text == 'Auto Trade'? SvgPicture.asset(IconsAssets.cancleIcon):SvgPicture.asset(IconsAssets.rightIcon, color: color)
     ]);
   }
 }

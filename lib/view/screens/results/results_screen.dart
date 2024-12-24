@@ -11,6 +11,7 @@ import 'package:currency_trading/view/widgets/drawer/drawer_widget.dart';
 import 'package:currency_trading/view/widgets/mainLinear_gradient_function.dart';
 import 'package:currency_trading/view/widgets/main_appbar_function.dart';
 import 'package:get/get.dart';
+import 'package:svg_flutter/svg.dart';
 
 double _result = 0;
 
@@ -45,7 +46,6 @@ class ResultsScreen extends StatelessWidget {
                                 children: [
                                   const CustomVerticalSizedox(height: 10),
                                   const MainNameContainerWidget(),
-                                  const CustomVerticalSizedox(height: 24),
                                   SizedBox(
                                       width: double.infinity,
                                       height: 65,
@@ -134,9 +134,10 @@ class ResultsScreen extends StatelessWidget {
                                             textAlignVertical: TextAlignVertical
                                                 .center,
                                             decoration: InputDecoration(
-                                                suffixIcon: Image.asset(
+                                                suffixIcon: SvgPicture.asset(
                                                   IconsAssets.editIcon,
                                                   alignment: Alignment.center,
+                                                  fit: BoxFit.scaleDown,
                                                 ),
                                                 contentPadding:
                                                     const EdgeInsets.symmetric(

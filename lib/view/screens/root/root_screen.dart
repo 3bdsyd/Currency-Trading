@@ -30,7 +30,7 @@ class RootScreen extends GetView<RootController> {
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
                         icon: SvgPicture.asset(IconsAssets.partnershipIcon,
-                            width: 30,
+                            width: 25,
                             color: controller.currentIndex == 0
                                 ? const Color(0xffF2B80C)
                                 : Colors.white),
@@ -38,7 +38,7 @@ class RootScreen extends GetView<RootController> {
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
                         icon: SvgPicture.asset(IconsAssets.supportIcon,
-                            width: 30,
+                            width: 25,
                             color: controller.currentIndex == 1
                                 ? const Color(0xffF2B80C)
                                 : Colors.white),
@@ -46,7 +46,7 @@ class RootScreen extends GetView<RootController> {
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
                         icon: SvgPicture.asset(IconsAssets.historyIcon,
-                            width: 30,
+                            width: 20,
                             color: controller.currentIndex == 2
                                 ? const Color(0xffF2B80C)
                                 : Colors.white),
@@ -54,7 +54,7 @@ class RootScreen extends GetView<RootController> {
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
                         icon: SvgPicture.asset(IconsAssets.signalsIcon,
-                            width: 30,
+                            width: 27,
                             color: controller.currentIndex == 3
                                 ? const Color(0xffF2B80C)
                                 : Colors.white),
@@ -62,7 +62,7 @@ class RootScreen extends GetView<RootController> {
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
                         icon: SvgPicture.asset(IconsAssets.resultsIcon,
-                            width: 30,
+                            width: 22,
                             color: controller.currentIndex == 4
                                 ? const Color(0xffF2B80C)
                                 : Colors.white),
@@ -70,7 +70,7 @@ class RootScreen extends GetView<RootController> {
                     BottomNavigationBarItem(
                         backgroundColor: const Color(0xff1f2439),
                         icon: SvgPicture.asset(IconsAssets.accessIcon,
-                            width: 30,
+                            width: 25,
                             color: controller.currentIndex == 5
                                 ? const Color(0xffF2B80C)
                                 : Colors.white),

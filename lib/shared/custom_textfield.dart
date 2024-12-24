@@ -24,7 +24,6 @@ class CustomTextField extends StatelessWidget {
       validator: validator != null ? (value) => validator!(value!) : null,
       controller: controller,
       decoration: InputDecoration(
-        
           hintText: hintText,
           contentPadding: const EdgeInsets.symmetric(vertical: 14.0),
           border: OutlineInputBorder(
@@ -33,10 +32,10 @@ class CustomTextField extends StatelessWidget {
           filled: true,
           fillColor: const Color(0xff282828),
           prefixIcon:
-              Padding(padding: const EdgeInsets.all(15.0), child: prefixIcon),
+              Padding(padding: const EdgeInsets.all(14.0), child: prefixIcon),
           suffixIcon: suffixIcon != null
               ? Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: suffixIcon!,
                 )
               : null,

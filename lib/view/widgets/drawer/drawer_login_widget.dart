@@ -49,7 +49,7 @@ class DrawerLoginWidget extends StatelessWidget {
       const CustomVerticalSizedox(height: 10),
       ListView.builder(
           shrinkWrap: true,
-          itemExtent: 35,
+          itemExtent: 42,
           itemBuilder: (context, index) => GetBuilder<LogoutControllerImpl>(
               builder: (controller) => ListTile(
                   visualDensity: const VisualDensity(vertical: -4),
@@ -65,14 +65,13 @@ class DrawerLoginWidget extends StatelessWidget {
                                 ? controller.logout()
                                 : () {};
                   },
-                  leading: Image.asset(
+                  leading: SvgPicture.asset(
                     signalsDrawerLoginModel[index].icon,
-                    width: 22,
-                    height: 22,
+                    fit: BoxFit.scaleDown,
                   ),
                   title: Text(signalsDrawerLoginModel[index].text,
                       style:
-                          const TextStyle(color: Colors.white, fontSize: 14)))),
+                          const TextStyle(color: Colors.white, fontSize: 16)))),
           itemCount: signalsDrawerLoginModel.length),
        const CustomVerticalSizedox(height: 50),
         if(code!=null)  Container(
@@ -85,7 +84,6 @@ class DrawerLoginWidget extends StatelessWidget {
           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             SvgPicture.asset(IconsAssets.copyIcon, width: 12, height: 14),
             const SizedBox(width: 5),
-          
              Text('Invitation Code: $code',
                 style: const TextStyle(color: Colors.white)),
           ])),

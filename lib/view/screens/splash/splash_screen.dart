@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
         height: double.infinity,
         width: double.infinity,
         decoration: mainLinearGradient(),
-        child:SvgPicture.asset(IconsAssets.logoIcon),
+        child: Image.asset(IconsAssets.logoIcon),
       ),
     );
   }

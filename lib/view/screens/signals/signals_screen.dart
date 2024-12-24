@@ -45,7 +45,7 @@ class _SignalsScreenState extends State<SignalsScreen> {
             'Home',
             Padding(
                 padding: const EdgeInsets.only(left: 18.0),
-                child: SvgPicture.asset(IconsAssets.logoIcon)
+                child: Image.asset(IconsAssets.logoIcon)
             )),
         body: Container(
             height: double.maxFinite,
