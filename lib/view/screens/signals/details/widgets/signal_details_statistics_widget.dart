@@ -1,32 +1,20 @@
-import 'package:currency_trading/logic/controllers/signal_details_controller.dart';
 import 'package:currency_trading/model/signals/signal_details_model.dart';
-import 'package:currency_trading/shared/custom_vertical_sizedox.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter_xlider/flutter_xlider.dart';
 
-final List<Color> progressColors = [
-  const Color(0xffFF0004),
-  const Color(0xff23252F),
-  const Color(0xff23252F),
-  const Color(0xff23252F),
-  const Color(0xff23252F),
-  const Color(0xff23252F),
-];
-
-class SignalDetailsStatisticsWidget extends StatelessWidget {
-  const SignalDetailsStatisticsWidget({
+class SignalDetailsStatisticsWidget extends StatefulWidget {
+  SignalDetailsStatisticsWidget({
     super.key,
     required this.entry,
+    required this.price,
     required this.stop,
+    required this.tragets,
     required this.tp1,
     required this.tp2,
     required this.tp3,
     required this.tp4,
     required this.tp5,
-    required this.price,
-    required this.tragets,
+    required this.currentPrice,
   });
   final String entry;
   final double price;
@@ -37,105 +25,122 @@ class SignalDetailsStatisticsWidget extends StatelessWidget {
   final String tp3;
   final String tp4;
   final String tp5;
+  double currentPrice;
+  @override
+  State<SignalDetailsStatisticsWidget> createState() =>
+      _SignalDetailsStatisticsWidgetState();
+}
 
-  double calculateProgress(double start, double end, double value) {
-    if (value <= start) return 0.0;
-    if (value >= end) return 1.0;
-    return (value - start) / (end - start);
-  }
-
+class _SignalDetailsStatisticsWidgetState
+    extends State<SignalDetailsStatisticsWidget> {
   @override
   Widget build(BuildContext context) {
-    final double entryValue = double.tryParse(entry) ?? 0.0;
-    final double stopValue = double.tryParse(stop) ?? 0.0;
-
-    final bool isPriceBelowEntry = price < entryValue;
-    final double progress = isPriceBelowEntry
-        ? calculateProgress(stopValue, entryValue, price)
-        : calculateProgress(entryValue, double.parse( tragets.last.target), price);
-
-    final double indicatorPosition = progress * progressColors.length;
-    final int activeIndex = indicatorPosition.floor();
-
-    return GetBuilder<SignalDetailsControllerImpl>(
-      builder: (controller) =>
-          Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        // Row for labels
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          const Text('Stop', style: TextStyle(color: Colors.white)),
-          const Text('Entry', style: TextStyle(color: Colors.white)),
-          ...List.generate(
-              tragets.length,
-              (index) => Text(
-                    'TP${index + 1}',
-                    style: TextStyle(
-                        color: tragets[index].isDone == '1'
-                            ? const Color(0xff3D992B)
-                            : Colors.white),
-                  )),
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        Column(children: [
+          const Text("Stop",
+              style: TextStyle(color: Colors.white, fontSize: 9)),
+          Text(widget.stop,
+              style: const TextStyle(color: Colors.white, fontSize: 9))
         ]),
-        const SizedBox(height: 5),
-        // Row for values
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Text(stop, style: const TextStyle(color: Colors.white)),
-          Text(entry, style: const TextStyle(color: Colors.white)),
-          Text(tp1,
-              style: TextStyle(
-                  color: tragets[0].isDone == '1'
-                      ? const Color(0xff3D992B)
-                      : Colors.white)),
-          Text(tp2,
-              style: TextStyle(
-                  color: tragets[1].isDone == '1'
-                      ? const Color(0xff3D992B)
-                      : Colors.white)),
-          Text(tp3,
-              style: TextStyle(
-                  color: tragets[2].isDone == '1'
-                      ? const Color(0xff3D992B)
-                      : Colors.white)),
-          Text(tp4,
-              style: TextStyle(
-                  color: tragets[3].isDone == '1'
-                      ? const Color(0xff3D992B)
-                      : Colors.white)),
-          Text(tp5,
-              style: TextStyle(
-                  color: tragets[4].isDone == '1'
-                      ? const Color(0xff3D992B)
-                      : Colors.white)),
+        Column(children: [
+          const Text("Entry",
+              style: TextStyle(color: Colors.white, fontSize: 9)),
+          Text(widget.entry,
+              style: const TextStyle(color: Colors.white, fontSize: 9))
         ]),
-        const SizedBox(height: 10),
-        Stack(clipBehavior: Clip.none, children: [
-          // Progress bar
-          Row(
-              children: List.generate(progressColors.length, (index) {
-            return Expanded(
-                child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(2),
-                  color: index <= activeIndex
-                      ? (!isPriceBelowEntry
-                          ? const Color(0xffFF0004)
-                          : const Color(0xff3D992B))
-                      : progressColors[index]),
-              height: 20,
-            ));
-          })),
-          // Indicator
-          Positioned(
-              left: isPriceBelowEntry
-                  ? (indicatorPosition / progressColors.length) * 100
-                  : (indicatorPosition / progressColors.length) * 200,
-              bottom: -6,
-              child: Container(
-                  width: 4,
-                  height: 30,
-                  decoration: BoxDecoration(
-                      color: const Color(0xff383F76),
-                      borderRadius: BorderRadius.circular(1))))
+        Column(children: [
+          const Text("TP1", style: TextStyle(color: Colors.green, fontSize: 9)),
+          Text(widget.tp1,
+              style: const TextStyle(color: Colors.green, fontSize: 9))
+        ]),
+        Column(children: [
+          const Text("TP2", style: TextStyle(color: Colors.green, fontSize: 9)),
+          Text(widget.tp2,
+              style: const TextStyle(color: Colors.green, fontSize: 9))
+        ]),
+        Column(children: [
+          const Text("TP3", style: TextStyle(color: Colors.white, fontSize: 9)),
+          Text(widget.tp3,
+              style: const TextStyle(color: Colors.white, fontSize: 9))
+        ]),
+        Column(children: [
+          const Text("TP4", style: TextStyle(color: Colors.white, fontSize: 9)),
+          Text(widget.tp4,
+              style: const TextStyle(color: Colors.white, fontSize: 9))
+        ]),
+        Column(children: [
+          const Text("TP5", style: TextStyle(color: Colors.white, fontSize: 9)),
+          Text(widget.tp5,
+              style: const TextStyle(color: Colors.white, fontSize: 9))
         ])
       ]),
-    );
+      Stack(children: [
+        FlutterSlider(
+          values: [
+            widget.currentPrice.clamp(
+              double.tryParse(widget.stop) ?? 0.0,
+              double.tryParse(widget.tp5) ?? 1.0,
+            ),
+          ],
+          min: double.tryParse(widget.stop) ?? double.tryParse(widget.entry),
+          max: double.tryParse(widget.tp5) ?? 1.0,
+          handlerWidth: 4,
+          handlerHeight: 40,
+          handler: FlutterSliderHandler(
+            child: Container(),
+            decoration: BoxDecoration(
+              color: const Color(0xff383F76),
+              borderRadius: BorderRadius.circular(2),
+            ),
+          ),
+          trackBar: FlutterSliderTrackBar(
+            activeTrackBar: BoxDecoration(
+              color: widget.currentPrice > double.parse(widget.entry)
+                  ? const Color(0xff3D992B)
+                  : const Color(0xffFF0004),
+            ),
+            inactiveTrackBar: const BoxDecoration(color: Color(0xff23252F)),
+            activeTrackBarHeight: 22,
+            inactiveTrackBarHeight: 22,
+          ),
+          step: const FlutterSliderStep(step: 0.01),
+          onDragging: (handlerIndex, lowerValue, upperValue) {
+            double minValue = double.tryParse(widget.stop) ?? 0.0;
+
+            if (lowerValue < minValue) {
+              lowerValue = minValue; // تقييد القيمة للحد الأدنى
+            }
+
+            if (mounted) {
+              setState(() {
+                widget.currentPrice = lowerValue;
+              });
+            }
+          },
+        ),
+        Positioned.fill(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: List.generate(7, (index) {
+                  if (index == 0 || index == 6) {
+                    return const SizedBox.shrink();
+                  }
+
+                  double start = double.tryParse(widget.stop) ?? 1.688;
+                  double end = double.tryParse(widget.tp5) ?? 4.12;
+                  double position = start + index * (end - start) / 6;
+
+                  return Positioned(
+                      left: (position - start) /
+                          (end - start) *
+                          MediaQuery.of(context).size.width,
+                      child: Container(
+                          width: 1,
+                          height: 22,
+                          color: Colors.white.withOpacity(.2)));
+                })))
+      ])
+    ]);
   }
 }

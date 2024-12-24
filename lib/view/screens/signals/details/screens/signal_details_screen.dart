@@ -97,7 +97,7 @@ class SignalDetailsScreen extends GetView<SignalDetailsControllerImpl> {
                                       .signalDetailsModel!.data.targets[4].target
                                     .toString(), price: controller
                                       .signalDetailsModel!.data.currentPrice, tragets:  controller
-                                      .signalDetailsModel!.data.targets,
+                                      .signalDetailsModel!.data.targets, currentPrice: controller.signalDetailsModel!.data.currentPrice.toDouble(),
                                 ),
                                 const CustomVerticalSizedox(height: 28),
                                 const Text(
